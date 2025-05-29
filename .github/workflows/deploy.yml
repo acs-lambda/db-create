@@ -1,4 +1,8 @@
 # lambda-template/.github/workflows/deploy.yml
+permissions:
+  id-token: write      # needed for STS AssumeRoleWithWebIdentity
+  contents: read       # so checkout can pull your code
+
 on:
   push:
     branches: [ main ]
